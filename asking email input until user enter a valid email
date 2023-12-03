@@ -1,0 +1,12 @@
+import re
+def check_email_address(address):
+  # Checks if the address match regular expression
+  is_valid = re.search('^\w+@\w+.\w+$', address)
+  # If there is a matching group
+  if is_valid:
+    return True
+  else:
+    print('It looks that provided mail is not in correct format. \n'
+          'Please make sure that you have "@" and "." in your address \n'
+          'and the length of your mail is at least 6 characters long')
+    return False
